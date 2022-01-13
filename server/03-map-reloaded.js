@@ -38,3 +38,17 @@ const immutableForm = orders.map((item) => {
 
 console.log(orders);
 console.log(immutableForm);
+
+//Practica
+const applyTax = orders.map((item) => {
+  if (item.total > 100) {
+    const newValue = item.total * 0.81;
+    return {
+      ...item,
+      total: newValue,
+    };
+  }
+});
+
+console.log(orders);
+console.log(applyTax);
